@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .main{
+            display: grid;
+            justify-content: center;
+            place-items: center;
+            /* background-color: rgb(80, 80, 175); */
+            background-color: seagreen;
+            width: 100vw;
+            height: 100vh;
+        }
+        .content{
+            display: flex;
+            background-color:rgb(49, 47, 47);
+            width: 50vw;
+            height: 54vh;
+            border-radius: 20px;
+        }
+        .left-content{
+            margin-top: 11%;
+            margin-left: 100px;
+        }
+        .web-div{
+            margin-left: 300px;
+            margin-top: 30px;
+        }
+        ::placeholder{
+            color: white;
+            font-weight: 900;
+            font-family: sans-serif;
+            letter-spacing: 1px;
+        }
+        .web{
+            background-color: transparent;
+            width: 230px;
+             border-top: none;
+            border-right: none;
+            border-left: none;
+            padding-bottom: 10px;
+            display: inline-block;
+            box-sizing: border-box;
+            color: white;
+        }
+        input:focus{
+         color: white;
+         border-bottom: 1px solid white;
+         outline: none;
+        }
+        .result{
+            position: absolute;
+            margin-top: 320px;
+            margin-left: 100px;
+            color: white;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="main">
+<div class="content">
+<div class="left-content">
+<div>
+    <h1 style="color: seagreen; font-weight: 900;">Student <br> Grading <br> Calcu</h1>
+</div>
+
+</div>
+<div class="right-content">
+<div class="web-div">
+    <input class="web" type="text" placeholder="WEB PROGRAMMING" onfocus="this.placeholder = ''" id="wp">
+</div>
+
+<div class="web-div">
+    <input class="web" type="text" placeholder="DATA STRUCTURE" onfocus="this.placeholder = ''" id="ds">
+</div>
+
+<div class="web-div">
+    <input class="web" type="text" placeholder="ANALYSES OF ALGO" onfocus="this.placeholder = ''" id="aoa">
+</div>
+
+<div class="web-div">
+    <input class="web" type="text" placeholder="MATHS" onfocus="this.placeholder = ''" id="maths">
+</div>
+
+<div class="web-div">
+    <!-- <h2 style="color: teal;">Show Percentage</h2> -->
+    <input type="button" value="Show Percentage" style="color: seagreen; background-color: transparent; font-size: 20px;
+    border: none; font-weight: 900;" onclick="calcu()">
+</div>
+
+</div>
+<div class="result">
+    <p id="showResult"></p>
+</div>
+
+</div>
+
+
+    </div>
+    
+    <script src="./index.js"></script>
+</body>
+</html>
